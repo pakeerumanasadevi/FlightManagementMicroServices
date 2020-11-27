@@ -1,4 +1,5 @@
 package com.capg.fss.service;
+
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,44 +10,41 @@ import com.capg.fss.dao.FlightScheduleDAO;
 import com.capg.fss.dto.FlightSchedule;
 
 @Service
-public class FlightScheduleService 
-{
+public class FlightScheduleService {
 	@Autowired
 	FlightScheduleDAO fsdao;
-	public void setFsdao(FlightScheduleDAO fsdao) { this.fsdao=fsdao; }
-	
-	//view FlightSchedule By Id
-	@Transactional(readOnly=true)
-	public Optional<FlightSchedule> getFlightSchedule(String scheduleId)
-	{
+
+	public void setFsdao(FlightScheduleDAO fsdao) {
+		this.fsdao = fsdao;
+	}
+
+	// view FlightSchedule By Id
+	@Transactional(readOnly = true)
+	public Optional<FlightSchedule> getFlightSchedule(String scheduleId) {
 		return fsdao.findById(scheduleId);
 	}
 
-	//view FlightSchedules
-	@Transactional(readOnly=true)
-	public List<FlightSchedule> getAllFlightSchedules()
-	{
+	// view FlightSchedules
+	@Transactional(readOnly = true)
+	public List<FlightSchedule> getAllFlightSchedules() {
 		return fsdao.findAll(Sort.by(Sort.Direction.ASC, "scheduleId"));
 	}
 
-	//add FlightSchedule
+	// add FlightSchedule
 	@Transactional
-	public FlightSchedule addFlightSchedule(FlightSchedule flightSchedule)
-	{
+	public FlightSchedule addFlightSchedule(FlightSchedule flightSchedule) {
 		return fsdao.save(flightSchedule);
 	}
 
-	//update FlightSchedule
+	// update FlightSchedule
 	@Transactional
-	public void updateFlightSchedule(FlightSchedule flightschedule)
-	{
+	public void updateFlightSchedule(FlightSchedule flightschedule) {
 		fsdao.save(flightschedule);
 	}
 
-	//Delete FlightSchedule
+	// Delete FlightSchedule
 	@Transactional
-	public void deleteFlightSchedule(String scheduleId)
-	{
+	public void deleteFlightSchedule(String scheduleId) {
 		fsdao.deleteById(scheduleId);
 	}
 }

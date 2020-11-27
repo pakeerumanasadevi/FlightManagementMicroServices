@@ -6,12 +6,11 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class BookingException extends Exception{
-	
-	@ExceptionHandler(value={BookingNotFoundException.class })
-		public ResponseEntity<Object> exception(BookingNotFoundException exception)
-		{
-		      return new ResponseEntity<>("No such booking Id exists", HttpStatus.NOT_FOUND);
-		}
+public class BookingException extends Exception {
+
+	@ExceptionHandler(value = { BookingNotFoundException.class })
+	public ResponseEntity<Object> exception(BookingNotFoundException exception) {
+		return new ResponseEntity<>("No such booking Id exists", HttpStatus.NOT_FOUND);
+	}
 
 }
