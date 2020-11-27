@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = "features", glue = "com.capg.fms.stepDefinition", plugin = { "pretty",
 		"json:target/cucumber/cucumber.json" })
 /*
- * @CucumberOptions( features = "src/test/resources/functionalTests", glue=
+  @CucumberOptions( features = "src/test/resources/functionalTests", glue=
  * {"stepDefinitions"} )
  */
 
