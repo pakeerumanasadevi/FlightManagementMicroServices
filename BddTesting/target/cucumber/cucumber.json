@@ -1,0 +1,82 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4128866000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestSteps.driverStart()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "User Should login with valid credentials",
+        "description": "",
+        "id": "user-should-login-successfully;user-should-login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3450948900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user launches FMS webapp",
+            "match": {
+              "location": "TestSteps.user_launches_FMS_webapp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2776325300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user provides valid username and password",
+            "match": {
+              "location": "TestSteps.user_provides_valid_username_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 96217900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicks on login",
+            "match": {
+              "location": "TestSteps.clicks_on_login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7191298500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user should logout successfully",
+            "match": {
+              "location": "TestSteps.user_should_logout_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "User should login successfully",
+    "description": "To do Automation testing on Flight Management System",
+    "id": "user-should-login-successfully",
+    "keyword": "Feature",
+    "uri": "features\\Fms-login.feature",
+    "tags": []
+  }
+]
