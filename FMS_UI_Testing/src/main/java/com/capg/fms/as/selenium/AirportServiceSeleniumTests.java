@@ -1,5 +1,6 @@
 package com.capg.fms.as.selenium;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -49,9 +50,9 @@ public class AirportServiceSeleniumTests {
 		WebElement aid = webdriver.findElement(By.id("airid"));
 		aid.sendKeys("105");
 		webdriver.findElement(By.name("search")).click();
-		// Alert formAlert = webdriver.switchTo().alert();
+		Alert formAlert = webdriver.switchTo().alert();
 
-		// formAlert.accept();
+		formAlert.accept();
 		Thread.sleep(2000);
 		webdriver.findElement(By.name("logoutairport")).click();
 		Thread.sleep(2200);
